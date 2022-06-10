@@ -1,0 +1,31 @@
+<% layout('/layouts/boilerplate') %>
+    <section class="first-section">  
+        <div class="text__container">
+            <h3>Calcula el beneficio de trabajar con nosotros con esta tabla!</h3>
+        </div>
+        <div class="container">
+            <form class="product__form" action="/escalatunegocio/table" id="productForm" method="POST">
+   
+               <div class="form__item">
+               <label for="name">Nombre del Producto</label>
+                <input  id="pName"  name="pName" type="pqty">
+               </div>
+   
+               <div class="form__item">
+               <label for="name">Precio del producto</label>
+                <input  id="pPrice"  name="pPrice" type="number">
+               </div>
+   
+               <div class="form__item">
+               <label for="name">Presupuesto</label>
+                <input  id="pBudget" name="pBudget" type="number">
+               </div>
+   
+              <div class="form__item">
+               <button type="submit">Construir tabla</button>
+              </div>
+   
+             </form>
+        </div>
+        <%- include('./table') %>
+    </section>

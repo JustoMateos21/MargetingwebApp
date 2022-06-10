@@ -1,0 +1,32 @@
+<head>
+    <link rel="stylesheet" href="/stylesheets/app.css">
+</head>
+
+<table class="table">
+    <thead class="columns__section">
+        <tr class="columns">
+            <th class="table__col">Producto</th>
+            <th class="table__col">ROI Semana</th>
+            <th class="table__col">ROI Mes</th>
+            <th class="table__col">ROI Año</th>
+            <th class="table__col"></th>
+        </tr>
+    </thead>
+    <% listP.forEach(product=> { %>
+    <tbody>
+        <tr class="rows">
+                <td id="tableRow" class=" table__row row-1" class="table__row">
+                      <h6 id="product">Producto: <%= product.pName %></h6>
+                      <h6 id="price">Precio:$<%= product.pPrice %></h6>
+                      <h6 id="budget">Presupuesto:$<%= product.pBudget %></h6>
+                </td>>
+                <td id="roiSemana" class="table__row">$<%= Math.floor(product.pBudget * 0.01)%></td>
+                <td id="roiMes" class="table__row">$<%= Math.floor(product.pBudget * 0.05)%></td>
+                <td id="roiAño" class="table__row">$<%= Math.floor(product.pBudget * 0.1)%></td>
+                <td id="roiAño" class="table__row">
+                    <a class="delete-btn" href="/escalatunegocio/table/<%= product.id %>">Borrar</a>
+                </td>
+        </tr>
+    </tbody>
+    <% }) %>
+</table>

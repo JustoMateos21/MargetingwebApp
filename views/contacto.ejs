@@ -1,0 +1,43 @@
+<% layout('/layouts/boilerplate') %>
+
+ <form action="/contacto" class="form" id="form" method="POST">
+    <div class="form__container">
+
+       <label for="nombre">Nombre</label>
+       <input type="text" name="name" id="name">
+       <p class="error-element" id="errorElement"></p>
+
+       <label for="correo">Correo electronico</label>
+       <input type="text" name="correo" id="correo">
+   
+   <label for="rubros">Selecciona tu emprendimiento</label>
+       <select name="rubros" id="">
+           <option value="">Restaurante</option>
+           <option value="">Productora de eventos</option>
+           <option value="">Barber shops</option>
+           <option value="">Centros de entrenamientos</option>
+           <option value="">Oficinas coworking</option>
+           <option value="">Administración de viviendas</option>
+           <option value="">Food Trucks</option>
+           <option value="">Otro</option>
+       </select>
+   
+       <label for="resultados">¿Que resultados te gustaria obtener?</label>
+       <textarea class="form__textarea" name="resultados" id="inputResultados"></textarea>
+       <button id="formBtn" class="form__btn">Enviar</button>
+      </div>
+   
+      <!-- <div class="captcha__container">
+       <h3>Por favor, escribi las letras de la imagen, debajo.</h3>
+       <div class="img__container" id="imgContainer">
+       </div>
+       <input type="text" class="userinput" id="userInput" name="captcha" placeholder="texto" >
+   </div> -->
+   <div class="hidden" id="formSent">
+       <h4 class="form-sent">Ok, formulario enviado =)</h4>
+   </div>
+   </form>
+   
+
+
+
